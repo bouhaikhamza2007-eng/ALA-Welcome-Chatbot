@@ -33,14 +33,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install --upgrade flet pyinstaller
 
-      # 4. Runs the Flet pack command to build the .app file
+     # 4. Runs the Flet pack command to build the .app file
       - name: Build the macOS app
         working-directory: ./Using Flet
-        run: flet pack Entry.py
-        
+        # This name MUST match the name in the path below
+        run: flet pack Entry.py --name "ALA-Chatbot"
+
       # 5. Uploads the final .app file so you can download it
       - name: Upload macOS Artifact
         uses: actions/upload-artifact@v4
         with:
           name: macOS-App
-          path: dist/ALA-Chatbot.app
+          # The path MUST include the working-directory folder
+          path: Using Flet/dist/ALA-Chatbot.app
