@@ -53,7 +53,7 @@ class GeminiApiClient:
         )
         
         # Titling doesn't need history, it's a one-off task.
-        return self._make_api_request(history=[], new_prompt=title_prompt)
+        return self._make_api_request(history=[], new_prompt=title_prompt).replace("\n","")
 
     def get_initial_response_and_title(self, user_prompt, system_prompt, language):
         """Gets the initial response and then generates a title for the conversation."""
@@ -79,4 +79,5 @@ class GeminiApiClient:
         )
         
         return self._make_api_request(history=history, new_prompt=full_prompt)
+
 
