@@ -53,21 +53,6 @@ Step 3: Install Required Libraries
 
     pip install -r requirements.txt
 
-Step 4: Configure the API Key (Crucial Step)
-
-The application requires a Google Gemini API key to function.
-
-    Open the app.py file in a text editor.
-
-    Navigate to line 12.
-
-    Replace the placeholder text "API_KEY" with your own valid Gemini API key.
-
-    # In app.py on line 12
-    API_KEY = "API_KEY"
-
-    Save and close the file.
-
 How to Run the Application
 
 Once the setup is complete, run the application from your terminal with the following command:
