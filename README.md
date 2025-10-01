@@ -61,7 +61,7 @@ The application requires a Google Gemini API key to function.
 
     Navigate to line 12.
 
-    Replace the placeholder text "AIzaSyB1192nAmBoknerY_6UgII_HCp_dXJNKrg" with your own valid Gemini API key.
+    Replace the placeholder text "API_KEY" with your own valid Gemini API key.
 
     # In app.py on line 12
     API_KEY = "YOUR_ACTUAL_API_KEY_HERE"
