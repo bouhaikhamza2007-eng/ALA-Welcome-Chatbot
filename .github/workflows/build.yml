@@ -31,8 +31,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install flet
-          pip install pyinstaller
+          pip install --upgrade flet pyinstaller
 
       # 4. Runs the Flet pack command to build the .app file
       - name: Build the macOS app
