@@ -36,6 +36,7 @@ jobs:
 
       # 4. Runs the Flet pack command to build the .app file
       - name: Build the macOS app
+        working-directory: ./Using Flet
         run: flet pack Entry.py --onefile --name "ALA-Chatbot"
 
       # 5. Uploads the final .app file so you can download it
@@ -43,4 +44,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: macOS-App
-          path: dist/MyCoolApp.app
+          path: dist/ALA-Chatbot.app
