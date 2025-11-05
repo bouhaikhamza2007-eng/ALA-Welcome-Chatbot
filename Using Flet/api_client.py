@@ -11,10 +11,7 @@ class GeminiApiClient:
         self.api_url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
 
     def _make_api_request(self, history, new_prompt):
-        """
-        A helper method to handle the core API request logic.
-        THE FIX: It now accepts the full conversation history.
-        """
+
         headers = {
             'Content-Type': 'application/json',
             'x-goog-api-key': self.api_key
@@ -73,11 +70,8 @@ class GeminiApiClient:
         """Gets a standard response for an ongoing conversation."""
         # The system prompt is now part of the history construction
         full_prompt = (
-            f"{system_prompt}\n\n"
-            f"Translate your final answer to {language}.\n\n"
+            f"{system_prompt}\n\n Give your answer Directly in {language} \n\n "
             f"Current Question: \"{user_prompt}\""
         )
         
         return self._make_api_request(history=history, new_prompt=full_prompt)
-
-
