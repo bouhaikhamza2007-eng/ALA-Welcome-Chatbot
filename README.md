@@ -53,6 +53,17 @@ Step 3: Install Required Libraries
 
     pip install -r requirements.txt
 
+Step 4: API Key
+
+    Go to the Google AI Studio API key generator: https://aistudio.google.com/api-keys
+
+    Create a new project to generate your Gemini API Key.
+
+    Copy the key, then open the app.py file.
+
+    Paste your key into the placeholder on line 12.
+
+
 How to Run the Application
 
 Once the setup is complete, run the application from your terminal with the following command:
